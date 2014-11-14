@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A27E418A-B8D0-4303-80FB-D5ABD139DCC5}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>project3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>Pure</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>Pure</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <HintPath>E:\MySQL\Connector NET 6.7.4\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="activeuser.txt" />
+    <None Include="AddContacts.srf">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="app.ico" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddContacts.cpp" />
+    <ClCompile Include="addEmployee.cpp" />
+    <ClCompile Include="addNotifications.cpp" />
+    <ClCompile Include="addProduct.cpp" />
+    <ClCompile Include="adminAddVendor1.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="changePass.cpp" />
+    <ClCompile Include="DeleteVendor.cpp" />
+    <ClCompile Include="deoAddVendor.cpp" />
+    <ClCompile Include="historyForm.cpp" />
+    <ClCompile Include="home.cpp" />
+    <ClCompile Include="home_DEO.cpp" />
+    <ClCompile Include="issueNotifications.cpp" />
+    <ClCompile Include="issueProductForm.cpp" />
+    <ClCompile Include="login.cpp" />
+    <ClCompile Include="project3.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendorRequests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddContacts.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="addEmployeeForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="addNotifications.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="addProduct.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="adminAddVendor1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="changePass.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="DeleteVendor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="deoAddVendor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="historyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="home.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="home_DEO.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="issueNotifications.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="issueProductForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="login.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RemoveEmployee.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="vendorRequests.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddContacts.resx">
+      <DependentUpon>AddContacts.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addEmployeeForm.resx">
+      <DependentUpon>addEmployeeForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addNotifications.resx">
+      <DependentUpon>addNotifications.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addProduct.resx">
+      <DependentUpon>addProduct.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminAddVendor1.resx">
+      <DependentUpon>adminAddVendor1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePass.resx">
+      <DependentUpon>changePass.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteVendor.resx">
+      <DependentUpon>DeleteVendor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deoAddVendor.resx">
+      <DependentUpon>deoAddVendor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resX">
+      <DependentUpon>Form1.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historyForm.resx">
+      <DependentUpon>historyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home_DEO.resx">
+      <DependentUpon>home_DEO.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issueNotifications.resx">
+      <DependentUpon>issueNotifications.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issueProductForm.resx">
+      <DependentUpon>issueProductForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveEmployee.resx">
+      <DependentUpon>RemoveEmployee.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendorRequests.resx">
+      <DependentUpon>vendorRequests.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
